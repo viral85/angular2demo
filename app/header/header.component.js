@@ -24,6 +24,12 @@ var HeaderComponent = (function () {
             document.getElementsByClassName('sidebar')[0].style.position = "";
             document.getElementsByClassName('sidebar')[0].style.top = "";
         }
+        if (yPos > '1540') {
+            document.getElementsByClassName('sidebar')[0].style.display = "none";
+        }
+        else {
+            document.getElementsByClassName('sidebar')[0].style.display = "block";
+        }
     };
     HeaderComponent = __decorate([
         core_1.Component({
