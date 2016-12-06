@@ -32,13 +32,13 @@ body {
   min-height: 300px;
   margin-right: 15px;
   padding: 15px;
-  width: 100%; }
+  width: 560px; }
 
 .footer {
   background: green;
   padding: 25px;
   color: #fff; 
-  height: 600px;
+  height: 800px;
 }
 
 .navbar-default .navbar-nav > li > a {

@@ -13,22 +13,22 @@ var trackscroll_directive_1 = require('../directives/trackscroll.directive');
 var HeaderComponent = (function () {
     function HeaderComponent() {
         this.shrinkCssClass = '';
+        this.cssStringClass = 'abc';
+        this.sdegree = 0;
     }
     HeaderComponent.prototype.onScrolled = function (yPos) {
         this.shrinkCssClass = yPos ? "shrink-header" : "";
         if (yPos > '644') {
-            document.getElementsByClassName('sidebar')[0].style.position = "fixed";
-            document.getElementsByClassName('sidebar')[0].style.top = "70px";
+            document.getElementById('sidebar').setAttribute("style", "position:fixed;  top:70px");
         }
-        else {
-            document.getElementsByClassName('sidebar')[0].style.position = "";
-            document.getElementsByClassName('sidebar')[0].style.top = "";
+        if (yPos > '1538') {
+            this.sdegree += 3;
+            this.translate = 'translateY(-' + this.sdegree + 'px)';
+            console.log();
+            document.getElementById('sidebar').setAttribute("style", "position:absolute; right:45px; margin-top:890px;");
         }
-        if (yPos > '1540') {
-            document.getElementsByClassName('sidebar')[0].style.display = "none";
-        }
-        else {
-            document.getElementsByClassName('sidebar')[0].style.display = "block";
+        if (yPos < '644') {
+            document.getElementById('sidebar').removeAttribute('style');
         }
     };
     HeaderComponent = __decorate([
